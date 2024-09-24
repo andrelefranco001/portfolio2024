@@ -296,7 +296,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
 `,Uw=Ye.img`
   width: 50rem;
 
-  @media (min-width: 320px) and (max-width: 1780px) {
+  @media (max-width: 1280px) {
     display: none !important;
   }
 `,Ww=Ye.img`
