@@ -7,6 +7,8 @@ import NavBar from "../components/NavBar/NavBar";
 //img
 import hello from "../public/hello.svg";
 import gradient from "../public/planet1.svg";
+import gradient2 from "../public/gradient7.svg";
+
 import funnyface from "../public/funny_face.svg";
 import todo from "../public/mytodo.png";
 import calcula from "../public/mycalculator.png";
@@ -17,8 +19,34 @@ import photo from "../public/photo1.jpg";
 
 //styles
 import { CardP, ContentBlock, ImgLogo, PhotoConteiner } from "./Style";
+import { useEffect, useState } from "react";
 
 function App() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const backgroundImage = document.querySelector(".background-image");
+      const secondBackgroundImage = document.querySelector(
+        ".second-background-image"
+      );
+
+      if (backgroundImage) {
+        backgroundImage.style.transform = `translateY(${scrollY * -0.5}px)`; // Efecto parallax
+      }
+
+      if (secondBackgroundImage) {
+        secondBackgroundImage.style.transform = `translateY(${
+          scrollY * -0.3
+        }px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <NavBar />
@@ -34,7 +62,7 @@ function App() {
           <div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <ImgLogo
-                className="animate__animated animate__jello longer"
+                // className="animate__animated animate__jello longer"
                 style={{
                   width: "20rem",
                 }}
@@ -51,7 +79,7 @@ function App() {
             >
               <p style={{ margin: "1rem" }}>
                 I'm Andrés Velásquez, a frontend developer and UX/UI designer,{" "}
-                bringing.{" "}
+                bringing{" "}
                 <b
                   style={{
                     background: "linear-gradient(90deg, #ffdd40, #d57171)",
@@ -76,6 +104,7 @@ function App() {
             <div className="background-image"></div>
 
             <img
+              className="animate__animated animate__jello longer"
               style={{
                 width: "50rem",
               }}
@@ -141,84 +170,85 @@ function App() {
           Projects
         </h3>
       </div>
-
-      <ContentBlock
-        style={{
-          marginTop: "1rem",
-          background: "#202020",
-          borderRadius: "20px",
-        }}
-      >
-        {/* <div className="hola2"> */}
-        <CardP>
-          <img
-            className="selectItem"
-            onClick={() =>
-              window.open(
-                "https://andrelefranco001.github.io/my-todo-list/build/",
-                "_blank"
-              )
-            }
-            style={{
-              width: "400px",
-              height: "300px",
-              cursor: "pointer",
-              margin: "1rem",
-              borderRadius: "20px",
-            }}
-            src={todo}
-            alt="My Icon"
-          />
-          <p>My ToDo List</p>
-        </CardP>
-        <CardP>
-          <img
-            className="selectItem"
-            onClick={() =>
-              window.open(
-                "https://andrelefranco001.github.io/my-calculator/",
-                "_blank"
-              )
-            }
-            style={{
-              width: "400px",
-              height: "300px",
-              cursor: "pointer",
-              margin: "1rem",
-              borderRadius: "20px",
-            }}
-            src={calcula}
-            alt="My Icon"
-          />
-          <p>My Calculator</p>
-        </CardP>
-        <CardP>
-          <img
-            className="selectItem"
-            onClick={() =>
-              window.open(
-                "https://andrelefranco001.github.io/my-memo-game/",
-                "_blank"
-              )
-            }
-            style={{
-              width: "400px",
-              height: "300px",
-              cursor: "pointer",
-              margin: "1rem",
-              borderRadius: "20px",
-            }}
-            src={game}
-            alt="My Icon"
-          />
-          <p>My Memo Game</p>
-        </CardP>
-      </ContentBlock>
-      <div
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <ContentBlock
+          style={{
+            marginTop: "1rem",
+            background: "#202020",
+            borderRadius: "20px",
+            width: "fit-content",
+          }}
+        >
+          <CardP>
+            <img
+              className="selectItem"
+              onClick={() =>
+                window.open(
+                  "https://andrelefranco001.github.io/my-todo-list/build/",
+                  "_blank"
+                )
+              }
+              style={{
+                width: "400px",
+                height: "300px",
+                cursor: "pointer",
+                margin: "1rem",
+                borderRadius: "20px",
+              }}
+              src={todo}
+              alt="My Icon"
+            />
+            <p>My ToDo List</p>
+          </CardP>
+          <CardP>
+            <img
+              className="selectItem"
+              onClick={() =>
+                window.open(
+                  "https://andrelefranco001.github.io/my-calculator/",
+                  "_blank"
+                )
+              }
+              style={{
+                width: "400px",
+                height: "300px",
+                cursor: "pointer",
+                margin: "1rem",
+                borderRadius: "20px",
+              }}
+              src={calcula}
+              alt="My Icon"
+            />
+            <p>My Calculator</p>
+          </CardP>
+          <CardP>
+            <img
+              className="selectItem"
+              onClick={() =>
+                window.open(
+                  "https://andrelefranco001.github.io/my-memo-game/",
+                  "_blank"
+                )
+              }
+              style={{
+                width: "400px",
+                height: "300px",
+                cursor: "pointer",
+                margin: "1rem",
+                borderRadius: "20px",
+              }}
+              src={game}
+              alt="My Icon"
+            />
+            <p>My Memo Game</p>
+          </CardP>
+        </ContentBlock>
+      </div>
+      {/* <div
         id="contact-section"
         style={{
           display: "flex",
-          marginTop: "20rem",
+          // marginTop: "20rem",
           justifyContent: "flex-start",
         }}
       >
@@ -232,13 +262,25 @@ function App() {
         >
           Contact
         </h3>
-      </div>
-
-      <ContentBlock
+      </div> */}
+      <img
+        className="second-background-image"
         style={{
-          marginTop: "1rem",
-          background: "#202020",
+          position: "absolute",
+          bottom: "-90rem",
+          right: "-5rem",
+          width: "30rem",
+          opacity: "0.7",
+        }}
+        src={gradient2}
+        alt="Additional Background"
+      />
+      <ContentBlock
+        id="contact-section"
+        style={{
+          marginTop: "20rem",
           borderRadius: "20px",
+          width: "100%",
         }}
       >
         <div
@@ -254,32 +296,40 @@ function App() {
           <div>
             <p>andresvelasquezfranco@gmail.com</p>
           </div>
-          <div style={{ display: "flex", gap: "1rem" }}>
-            <GitHubIcon
-              style={{
-                fontSize: "3rem",
-                cursor: "pointer",
-              }}
-              onClick={() =>
-                window.open("https://github.com/andrelefranco001", "_blank")
-              }
-            />
+          <div>
+            <div style={{ display: "flex", flexDirection: "row", gap: "1rem" }}>
+              <GitHubIcon
+                style={{
+                  fontSize: "3rem",
+                  cursor: "pointer",
+                }}
+                onClick={() =>
+                  window.open("https://github.com/andrelefranco001", "_blank")
+                }
+              />
 
-            <LinkedInIcon
-              style={{
-                fontSize: "3rem",
-                cursor: "pointer",
-              }}
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/andressoftwareengineer/",
-                  "_blank"
-                )
-              }
-            />
+              <LinkedInIcon
+                style={{
+                  fontSize: "3rem",
+                  cursor: "pointer",
+                }}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/andressoftwareengineer/",
+                    "_blank"
+                  )
+                }
+              />
+            </div>
           </div>
         </div>
       </ContentBlock>
+      <div style={{ display: "flex", justifyContent: "right" }}>
+        {" "}
+        <p style={{ fontSize: "0.8rem" }}>
+          Designed and developed by Andres Velasquez - 2024
+        </p>
+      </div>
     </>
   );
 }

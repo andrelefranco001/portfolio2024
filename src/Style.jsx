@@ -6,7 +6,9 @@ export const ImgLogo = styled.img``;
 export const ContentBlock = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 5rem;
+
   gap: 3rem;
 
   p {
@@ -21,6 +23,40 @@ export const ContentBlock = styled.div`
     font-size: 3rem;
     margin: 1rem 0 1rem 0;
     padding: 0 3rem 0 3rem;
+  }
+
+  // Media query para pantallas entre 480px y 1024px
+  @media (min-width: 480px) and (max-width: 1900px) {
+    flex-direction: column; // Cambia a columna para pantallas medianas
+    width: fit-content;
+    align-items: center;
+
+    p {
+      font-size: 1.3rem; // Ajusta el tamaño de la fuente
+      padding: 0 2rem; // Ajusta el padding
+    }
+
+    h3 {
+      font-size: 2.5rem; // Ajusta el tamaño del título
+      padding: 0 2rem;
+    }
+  }
+
+  // Media query para pantallas menores a 480px (móviles)
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    p {
+      font-size: 1.1rem; // Reduce aún más el tamaño de la fuente
+      padding: 0 1rem; // Reduce el padding
+    }
+
+    h3 {
+      font-size: 2rem; // Reduce el tamaño del encabezado
+      padding: 0 1rem;
+    }
   }
 `;
 
