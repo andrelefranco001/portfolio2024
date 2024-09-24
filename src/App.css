@@ -1,0 +1,68 @@
+#root {
+  /* max-width: 1280px; */
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Inter Display", sans-serif;
+}
+
+.hola {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  /* background-color: #2f2f2f; */
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-top: 5rem;
+  text-align: left;
+  /* width: 60%; */
+}
+
+.hola2 {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  line-height: 72px;
+  letter-spacing: -0.03em;
+  /* background-color: #202020; */
+  background-repeat: repeat;
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: left;
+  gap: "2rem";
+  margin-top: 5rem;
+}
+
+.longer {
+  display: inline-block;
+  margin: 0 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    animation: alternate;
+  }
+}
+
+.selectItem {
+  transition: transform 0.3s ease;
+}
+
+.selectItem:hover {
+  transform: translateY(-10px);
+}
+
+.background-image {
+  background-image: url("../public/gradient1.svg");
+  background-repeat: no-repeat;
+  left: 7%;
+  top: 105%;
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  z-index: -1;
+}
