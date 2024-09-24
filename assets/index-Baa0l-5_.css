@@ -1,4 +1,4 @@
-@charset "UTF-8";#root{max-width:80%;margin:0 auto;padding:2rem;text-align:center;font-family:Inter Display,sans-serif}.hola{display:flex;flex-direction:row;width:auto;font-size:64px;line-height:72px;font-weight:500;letter-spacing:-.03em;border-radius:2rem;padding:1rem;margin-top:5rem;text-align:left}.hola2{display:flex;flex-direction:row;width:auto;line-height:72px;letter-spacing:-.03em;background-repeat:repeat;border-radius:2rem;padding:1rem;text-align:left;gap:"2rem";margin-top:5rem}.longer{display:inline-block;margin:0 .5rem;cursor:pointer}.longer:hover{animation:alternate}.selectItem{transition:transform .3s ease}.selectItem:hover{transform:translateY(-10px)}.background-image{background-image:url(https://andrelefranco001.github.io/portfolio2024/assets/gradient1-DLmgjZuR.svg);background-repeat:no-repeat;left:7%;top:140%;width:550px;height:550px;position:absolute;z-index:-1}/*!
+@charset "UTF-8";#root{max-width:80%;margin:0 auto;padding:2rem;text-align:center;font-family:Inter Display,sans-serif}/*!
  * animate.css - https://animate.style/
  * Version - 4.1.1
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
