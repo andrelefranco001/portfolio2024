@@ -327,7 +327,7 @@ export const ImgLogo = styled.img`
 export const ImgGradient = styled.img`
   width: 50rem;
 
-  @media (min-width: 320px) and (max-width: 1780px) {
+  @media (max-width: 1280px) {
     display: none !important;
   }
 `;
