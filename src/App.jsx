@@ -17,7 +17,7 @@ import game from "../public/mymemo.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import photo from "../public/photo1.jpg";
-
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 //styles
 import {
   CardBlock,
@@ -31,10 +31,13 @@ import {
   ImgLogo,
   PhotoConteiner,
   ProjectBlock,
+  ScrollToTopButton,
 } from "./Style";
 import { useEffect, useState } from "react";
 
 function App() {
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -42,6 +45,13 @@ function App() {
       const secondBackgroundImage = document.querySelector(
         ".second-background-image"
       );
+
+      // Mostrar el botón si se ha hecho scroll hacia abajo
+      if (scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
 
       if (backgroundImage) {
         backgroundImage.style.transform = `translateY(${scrollY * -0.5}px)`; // Efecto parallax
@@ -60,6 +70,10 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
       <NavBar />
@@ -206,6 +220,12 @@ function App() {
           </div>
         </div>
       </ContactBlock>
+      {/* Button scroll hacia arriba */}
+      {isVisible && (
+        <ScrollToTopButton onClick={scrollToTop}>
+          <ArrowUpwardIcon />
+        </ScrollToTopButton>
+      )}
     </>
   );
 }

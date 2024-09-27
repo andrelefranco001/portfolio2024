@@ -83,8 +83,28 @@ export const CardP = styled.div`
     padding: 1rem;
   }
 `;
+export const ScrollToTopButton = styled.div`
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 1000;
 
+  &:hover {
+    background-color: #ffffff2e;
+  }
+`;
 export const ContactBlock = styled.div`
+  display: flex;
+  justify-content: center;
   margin-top: 20rem;
   border-radius: 20px;
   width: 100%;
@@ -128,6 +148,9 @@ export const ContactBlock = styled.div`
   .icon {
     font-size: 3rem;
     cursor: pointer;
+    &:hover {
+      color: #d57171;
+    }
   }
 
   @media (max-width: 1024px) {
@@ -260,17 +283,15 @@ export const ImgGradient1 = styled.img`
 
 export const ImgGradient2 = styled.img`
   position: absolute;
+  width: 40rem;
   bottom: -90rem;
-  right: -5rem;
+  right: 5rem;
   opacity: 0.7;
   z-index: -1;
 
-  @media (min-width: 480px) and (max-width: 1024px) {
-    width: 25rem;
-  }
-
-  @media (min-width: 1025px) {
-    width: 30rem;
+  @media (max-width: 1024px) {
+    width: 22rem;
+    left: 1rem;
   }
 `;
 

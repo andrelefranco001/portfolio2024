@@ -5,7 +5,7 @@ export const Bar = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: auto;
   height: 2rem;
   padding: 1rem;
   border-radius: 5rem;
@@ -20,6 +20,7 @@ export const Bar = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    justify-content: center;
     height: 100%;
     gap: 1rem;
   }
