@@ -1,99 +1,6 @@
 import styled from "styled-components";
 import "animate.css";
 
-// export const ProjectBlock = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   margin-top: 20rem;
-//   justify-content: flex-start;
-
-//   h3 {
-//     align-self: flex-start;
-//     font-size: 3rem;
-//     margin: 1rem 0 1rem 0;
-//     padding: 0 3rem 0 3rem;
-//     background: linear-gradient(90deg, #6c5fe1, #d57171);
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     background-clip: text;
-//     text-fill-color: transparent;
-//   }
-
-//   /* Media query para tablets */
-//   @media (min-width: 480px) and (max-width: 1024px) {
-//     h3 {
-//       font-size: 2rem;
-//     }
-//   }
-
-//   /* Media query para móviles */
-//   @media (max-width: 480px) {
-//     h3 {
-//       font-size: 1rem;
-//     }
-//   }
-// `;
-
-// export const CardBlock = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   margin-top: 1rem;
-//   background: #202020;
-//   border-radius: 20px;
-//   width: fit-content;
-
-//   /* Media query para tablets */
-//   @media (min-width: 480px) and (max-width: 1024px) {
-//     width: fit-content;
-//   }
-
-//   /* Media query para móviles */
-//   @media (max-width: 480px) {
-//     width: fit-content;
-//   }
-// `;
-
-// export const CardP = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   height: auto;
-//   padding: 2rem;
-//   border-radius: 2rem;
-//   margin-top: 2rem;
-
-//   .selectItem {
-//     transition: transform 0.3s ease;
-//   }
-
-//   .selectItem:hover {
-//     transform: translateY(-10px);
-//   }
-
-//   p {
-//     font-size: 1.3rem;
-//     color: #bebebe;
-//     padding: 0.5rem;
-//   }
-
-//   .img {
-//     width: 400px;
-//     height: 300px;
-//     cursor: pointer;
-//     margin: 1rem;
-//     border-radius: 20px;
-//   }
-//   @media (max-width: 1024px) {
-//     padding: 1.5rem;
-//   }
-
-//   @media (max-width: 480px) {
-//     padding: 1rem;
-//   }
-// `;
-
 export const ProjectBlock = styled.div`
   display: flex;
   flex-direction: column;
@@ -193,7 +100,9 @@ export const ContactBlock = styled.div`
     background-clip: text;
     text-fill-color: transparent;
   }
-
+  .footer {
+    font-size: 0.8rem;
+  }
   .contact-container1 {
     display: flex;
     flex-direction: row;
@@ -215,25 +124,26 @@ export const ContactBlock = styled.div`
 
       flex-direction: row;
     }
-
-    .icon {
-      font-size: 3rem;
-      cursor: pointer;
-    }
-
-    p {
-      font-size: 0.8rem;
-    }
+  }
+  .icon {
+    font-size: 3rem;
+    cursor: pointer;
   }
 
-  @media (min-width: 420px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     .contact-container1 {
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
     }
     .mail {
-      font-size: 1.3rem;
+      font-size: 1rem;
+    }
+    .icon {
+      font-size: 2.5rem;
+    }
+    .footer {
+      font-size: 0.6rem;
     }
     .contact-container2 {
       align-items: center;
@@ -291,7 +201,7 @@ export const ContentBlock = styled.div`
 
   /* Media query para tablets */
 
-  @media (min-width: 420px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     justify-content: center;
 
     .hola2 {
