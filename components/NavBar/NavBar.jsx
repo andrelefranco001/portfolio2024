@@ -26,7 +26,7 @@ function NavBar() {
   return (
     <Bar>
       <div style={{ margin: "0 1rem 0 1rem" }}>
-        <h3>Andres_Velasquez</h3>
+        <h3>Andres Velasquez</h3>
       </div>
 
       <img

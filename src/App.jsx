@@ -82,7 +82,7 @@ function App() {
         <div className="hola">
           <div>
             <div className="helloLogo">
-              <ImgLogo className="ImgLogo" src={hello} alt="My Icon" />
+              <ImgLogo className="ImgLogo" src={hello} />
             </div>
 
             <div className="container1">
@@ -102,7 +102,6 @@ function App() {
             <ImgGradient
               className="animate__animated animate__jello longer"
               src={gradient}
-              alt="My Icon"
             />
           </div>
         </div>
@@ -112,7 +111,7 @@ function App() {
           <PhotoConteiner className="animate__animated animate__fadeIn">
             <div className="photo-wrapper">
               <img className="funnyface" src={funnyface} alt="Funny Face" />
-              <img className="photo" src={photo} alt="My Icon" />
+              <img className="photo" src={photo} />
             </div>
           </PhotoConteiner>
           <div className="content-block1">
@@ -143,7 +142,6 @@ function App() {
                   )
                 }
                 src={todo}
-                alt="My Icon"
               />
               <p>My ToDo List</p>
             </CardP>
@@ -157,7 +155,6 @@ function App() {
                   )
                 }
                 src={calcula}
-                alt="My Icon"
               />
               <p>My Calculator</p>
             </CardP>
@@ -171,7 +168,6 @@ function App() {
                   )
                 }
                 src={game}
-                alt="My Icon"
               />
               <p>My Memo Game</p>
             </CardP>
